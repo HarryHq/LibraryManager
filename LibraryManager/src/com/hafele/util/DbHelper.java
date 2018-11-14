@@ -12,10 +12,10 @@ import java.sql.Statement;
 * 数据库操作工具
 */
 public class DbHelper {
-	private static String dbClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private static String dbUrl = "jdbc:sqlserver://127.0.0.1:1433;databaseName=db_LibraryManagementSystem";
-	private static String dbUser = "sa";
-	private static String dbPassword = "hafele";
+	private static String dbClassName = "com.mysql.cj.jdbc.Driver";
+	private static String dbUrl = "jdbc:mysql://localhost:3306/db_LibraryManagementSystem?useSSL=false";
+	private static String dbUser = "root";
+	private static String dbPassword = "root";
 	private static DbHelper instance = null;
 	  
     private DbHelper() {  

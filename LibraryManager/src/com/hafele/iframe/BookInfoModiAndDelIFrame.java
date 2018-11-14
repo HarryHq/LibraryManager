@@ -33,8 +33,7 @@ import com.hafele.util.Item;
 import com.hafele.util.MapUtil;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年10月5日 下午2:42:19
+* 
 * 类说明
 */
 @SuppressWarnings("serial")

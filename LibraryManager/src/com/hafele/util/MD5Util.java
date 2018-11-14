@@ -94,7 +94,7 @@ public class MD5Util {
         return convertMD5(convertMD5(str));
     }
     public static void main(String[] args) {
-        String s = new String("123456");
+        String s = new String("123");
         System.out.println(md5Decode("a6aeb3ffa55fc7d664406af9c3bd0f1b"));
         System.out.println("Ô­Ê¼£º" + s);
         System.out.println("MD5ºó£º" + md5(s));

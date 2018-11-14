@@ -10,93 +10,49 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *   
- * 
- * @Title: StringHelper.java
- * @Package com.jarvis.base.utils
- * @Description:
- * @author Jack 
- * @date 2017年9月2日 下午2:23:51
- * @version V1.0   字符串处理工具类。
- */
+
 public final class StringHelper {
 
-	/**
-	 * 描述： 构造方法
-	 */
+
 	private StringHelper() {
 	}
 
-	/**
-	 * 空字符串
-	 */
+
 	public static final String EMPTY_STRING = "";
 
-	/**
-	 * 点
-	 */
+
 	public static final char DOT = '.';
 
-	/**
-	 * 下划线
-	 */
+
 	public static final char UNDERSCORE = '_';
 
-	/**
-	 * 逗点及空格
-	 */
+
 	public static final String COMMA_SPACE = ", ";
 
-	/**
-	 * 逗点
-	 */
+
 	public static final String COMMA = ",";
 
-	/**
-	 * 开始括号
-	 */
+
 	public static final String OPEN_PAREN = "(";
 
-	/**
-	 * 结束括号
-	 */
+
 	public static final String CLOSE_PAREN = ")";
 
-	/**
-	 * 单引号
-	 */
+
 	public static final char SINGLE_QUOTE = '\'';
 
-	/**
-	 * 回车
-	 */
+
 	public static final String CRLF = "\r\n";
 
-	/**
-	 * 常量 12
-	 */
+
 	public static final int FIANL_TWELVE = 12;
 
-	/**
-	 * 十六进制常量 0x80
-	 */
+
 	public static final int HEX_80 = 0x80;
 
-	/**
-	 * 十六进制常量 0xff
-	 */
 	public static final int HEX_FF = 0xff;
 
-	/**
-	 * 把字符数组，转化为一个字符
-	 *
-	 * @param seperator
-	 *            字符分隔符
-	 * @param strings
-	 *            数组对象
-	 * @return 字符串
-	 */
+
 	public static String join(String seperator, String[] strings) {
 		int length = strings.length;
 		if (length == 0) {
@@ -109,15 +65,7 @@ public final class StringHelper {
 		return buf.toString();
 	}
 
-	/**
-	 * 把迭代对象转化为一个字符串
-	 *
-	 * @param seperator
-	 *            分隔符
-	 * @param objects
-	 *            迭代器对象
-	 * @return 字符串
-	 */
+
 	public static String join(String seperator, Iterator<?> objects) {
 		StringBuffer buf = new StringBuffer();
 		if (objects.hasNext()) {
@@ -129,17 +77,7 @@ public final class StringHelper {
 		return buf.toString();
 	}
 
-	/**
-	 * 把两个字符串数组的元素用分隔符连接，生成新的数组，生成的数组以第一个字符串数组为参照，与其长度相同。
-	 *
-	 * @param x
-	 *            字符串数组
-	 * @param seperator
-	 *            分隔符
-	 * @param y
-	 *            字符串数组
-	 * @return 组合后的字符串数组
-	 */
+
 	public static String[] add(String[] x, String seperator, String[] y) {
 		String[] result = new String[x.length];
 		for (int i = 0; i < x.length; i++) {
@@ -148,15 +86,7 @@ public final class StringHelper {
 		return result;
 	}
 
-	/**
-	 * 生成一个重复的字符串，如需要重复*10次，则生成：**********。
-	 *
-	 * @param string
-	 *            重复元素
-	 * @param times
-	 *            重复次数
-	 * @return 生成后的字符串
-	 */
+
 	public static String repeat(String string, int times) {
 		StringBuffer buf = new StringBuffer(string.length() * times);
 		for (int i = 0; i < times; i++) {
@@ -165,17 +95,7 @@ public final class StringHelper {
 		return buf.toString();
 	}
 
-	/**
-	 * 字符串替换处理，把旧的字符串替换为新的字符串，主要是通过字符串查找进行处理
-	 *
-	 * @param source
-	 *            需要进行替换的字符串
-	 * @param old
-	 *            需要进行替换的字符串
-	 * @param replace
-	 *            替换成的字符串
-	 * @return 替换处理后的字符串
-	 */
+
 	public static String replace(String source, String old, String replace) {
 		StringBuffer output = new StringBuffer();
 
@@ -185,7 +105,7 @@ public final class StringHelper {
 		int posStart = 0;
 		int pos;
 
-		// 通过截取字符串的方式，替换字符串
+		//通过截取字符串的方式，替换字符串
 		while ((pos = source.indexOf(old, posStart)) >= 0) {
 			output.append(source.substring(posStart, pos));
 

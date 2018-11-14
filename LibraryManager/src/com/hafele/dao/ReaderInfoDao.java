@@ -14,8 +14,6 @@ import com.hafele.model.ReadersInfo;
 import com.hafele.util.DbHelper;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月23日 下午3:07:20
 * ReaderInfoDao类，对读者信息表执行相关操作
 */
 public class ReaderInfoDao {

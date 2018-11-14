@@ -26,11 +26,11 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 import com.hafele.dao.ReaderInfoDao;
+import com.hafele.util.DateUtils;
 import com.hafele.util.MyDocument;
 
+
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月22日 下午1:57:58
 * 读者信息添加
 */
 @SuppressWarnings("serial")
@@ -129,7 +129,7 @@ public class ReaderAddIFrame extends JInternalFrame {
 		SimpleDateFormat myfmt=new SimpleDateFormat("yyyy-MM-dd");
 		registrationDateTxt = new JFormattedTextField(myfmt.getDateInstance());
 		registrationDateTxt.setColumns(10);
-		registrationDateTxt.setValue(new java.util.Date());
+		registrationDateTxt.setValue(DateUtils.toSqlDate(new java.util.Date()));
 		registrationDateTxt.addKeyListener(new DateListener());
 		
 		readerNumTxt = new JTextField();
@@ -348,9 +348,15 @@ public class ReaderAddIFrame extends JInternalFrame {
 			if(!button1.isSelected()) {
 				sex = "2";
 			}
-			
+			System.out.println(registrationDateTxt.getText());
+			long d=new java.util.Date().getTime();
+			Date date = new Date(d);
 //			System.out.println(nameTxt.getText()+sex.trim()+ageTxt.getText().trim()+occupationTxt.getText().trim()+validDocumentation.getSelectedIndex()+idNumberTxt.getText().trim()+telNumberTxt.getText().trim()+depositTxt.getText().trim()+registrationDateTxt.getText().trim()+readerNumTxt.getText().trim());
-			int i = ReaderInfoDao.insertReader(nameTxt.getText().trim(),sex.trim(),ageTxt.getText().trim(),occupationTxt.getText().trim(),validDocumentation.getSelectedIndex(),idNumberTxt.getText().trim(),telNumberTxt.getText().trim(),BigDecimal.valueOf(Double.valueOf(depositTxt.getText().trim())),Date.valueOf(registrationDateTxt.getText().trim()),readerNumTxt.getText().trim());
+			int i = ReaderInfoDao.insertReader(nameTxt.getText().trim(),sex.trim(),ageTxt.getText().trim(),
+					occupationTxt.getText().trim(),validDocumentation.getSelectedIndex(),
+					idNumberTxt.getText().trim(),telNumberTxt.getText().trim(),
+					BigDecimal.valueOf(Double.valueOf(depositTxt.getText().trim())),
+					date,readerNumTxt.getText().trim());
 			
 			if(i == 1) {
 				JOptionPane.showMessageDialog(null, "添加成功！");

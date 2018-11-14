@@ -28,14 +28,14 @@ import com.hafele.dao.BookInfoDao;
 import com.hafele.dao.BookStyleDao;
 import com.hafele.model.BookInfo;
 import com.hafele.model.BookStyle;
+import com.hafele.util.DateUtils;
 import com.hafele.util.Item;
 import com.hafele.util.SearcISBNDemo;
 
 import net.sf.json.JSONObject;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月21日 下午11:38:00
+* 
 * 图书信息添加窗体
 */
 @SuppressWarnings("serial")
@@ -331,7 +331,10 @@ public class BookInfoAddIFrame extends JInternalFrame {
 				JOptionPane.showMessageDialog(null, "出版日期格式请使用\"yyyy-MM-dd\"格式");
 				return;
 			}
-			int i = BookInfoDao.insertBookInfo(ISBN,bookTypes,bookName,bookAuthor,publisher,Date.valueOf(orderDate),Date.valueOf(publisherDate),Double.valueOf(price));
+			System.out.println(orderDate+"\n"+publisherDate);
+			long d=new java.util.Date().getTime();
+			Date date = new Date(d);
+			int i = BookInfoDao.insertBookInfo(ISBN,bookTypes,bookName,bookAuthor,publisher,date,Date.valueOf(publisherDate),Double.valueOf(price));
 			if(i == 1) {
 				JOptionPane.showMessageDialog(null, "添加成功");
 				resertTextFile();

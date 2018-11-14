@@ -35,11 +35,7 @@ import com.hafele.model.Borrow;
 import com.hafele.model.ReadersInfo;
 import com.hafele.util.MapUtil;
 
-/**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年10月6日 上午11:08:20
-* 图书借阅主窗体
-*/
+
 @SuppressWarnings("serial")
 public class BookBorrowIFrame extends JInternalFrame {
 	private JTable table;

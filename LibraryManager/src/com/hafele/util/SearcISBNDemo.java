@@ -29,10 +29,10 @@ public class SearcISBNDemo {
     public static String userAgent =  "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36";
  
     //配置您申请的KEY － 聚合数据API
-    public static final String APPKEY_JUHE ="acfdff0a5cb840678cc0d2553402913f";//该API免费次数已用完请自行到https://www.juhe.cn/申请appkey
+    public static final String APPKEY_JUHE ="";//该API免费次数已用完请自行到https://www.juhe.cn/申请appkey
  
     //配置您申请的KEY － 极速数据API
-    public static final String APPKEY_JISU ="86499d759f8a2f82";//该API免费次数已用完请自行到https://www.jisuapi.com申请appkey
+    public static final String APPKEY_JISU ="";//该API免费次数已用完请自行到https://www.jisuapi.com申请appkey
     
     //图书ISBN检索 － 聚合数据API
     public static String getRequestJuhe(String ISBN){
