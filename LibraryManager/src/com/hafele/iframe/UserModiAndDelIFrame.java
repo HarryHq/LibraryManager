@@ -28,8 +28,7 @@ import com.hafele.dao.AdminDao;
 import com.hafele.model.Admin;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月28日 下午11:29:14
+*
 * 类说明
 */
 @SuppressWarnings("serial")

@@ -26,8 +26,7 @@ import com.hafele.iframe.BookLoginIFrame;
 
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月20日 上午9:58:53
+*
 * 图书管理系统主窗体
 */
 @SuppressWarnings("serial")

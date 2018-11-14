@@ -25,8 +25,6 @@ import com.hafele.dao.AdminDao;
 import com.hafele.util.MD5Util;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月28日 下午1:23:24
 * 类说明
 */
 @SuppressWarnings("serial")
@@ -227,7 +225,9 @@ public class UserAddIFrame extends JInternalFrame {
 				if(!radioButton1.isSelected()){
 					sex="2";
 				}
-				int i = AdminDao.insertAdmin(userNumberTxt.getText(),userNameTxt.getText(),passwordMD5,sex,ageTxt.getText(),Date.valueOf(regdateTxt.getText()),telNumTxt.getText(),idCardTxt.getText());
+				long d=new java.util.Date().getTime();
+				Date date = new Date(d);
+				int i = AdminDao.insertAdmin(userNumberTxt.getText(),userNameTxt.getText(),passwordMD5,sex,ageTxt.getText(),date,telNumTxt.getText(),idCardTxt.getText());
 				if(i == 1) {
 					JOptionPane.showMessageDialog(null, "添加成功！");
 					doDefaultCloseAction();

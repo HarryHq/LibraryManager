@@ -20,8 +20,7 @@ import java.util.List;
 import java.awt.event.ActionEvent;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月30日 上午12:37:53
+* 
 * 图书类别添加
 */
 @SuppressWarnings("serial")

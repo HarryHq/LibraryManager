@@ -10,7 +10,7 @@ create table sys_admin(
 );
 
 create table system_books(
-	bookid varchar(10),
+	bookid varchar(20),
 	bookname varchar(20),
 	bookstylenumber varchar(10),
 	bookauthor varchar(20),
@@ -22,10 +22,10 @@ create table system_books(
 );
 
 create table book_style(
-	bookStyleNumber varchar(20),	
-	bookStyle varchar(20),	
-	borrowDays varchar(10),	
-	amerce varchar(10)	
+	bookstyleno varchar(20),	
+	bookstyle varchar(20),	
+	borrowdays varchar(10),	
+	amerce varchar(10)
 );
 
 create table system_readers(
@@ -42,10 +42,25 @@ create table system_readers(
 );
 
 create table borrow_record(
-	bookId varchar(10),
-	readerId varchar(10),
-	borrowDate varchar(20),
-	backDate varchar(20)
+	bookid varchar(20),
+	readerid varchar(10),
+	borrowDate varchar(30),
+	backDate varchar(30)
+);
+
+create table return_record(
+	bookid varchar(10),
+	readerid varchar(10),
+	returndate varchar(20)
+);
+
+create table reader_fee(
+	readerid varchar(10),
+	readername varchar(20),
+	bookid varchar(10),
+	bookname varchar(20),
+	bookfee varchar(10),
+	borrowdate varchar(30)
 );
 
 

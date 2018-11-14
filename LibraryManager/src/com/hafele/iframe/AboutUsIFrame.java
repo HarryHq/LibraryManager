@@ -14,8 +14,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年10月12日 下午2:40:33
 * 类说明
 */
 @SuppressWarnings("serial")
@@ -34,10 +32,10 @@ public class AboutUsIFrame extends JInternalFrame {
 		JPanel logoPanel = new JPanel();
 		getContentPane().add(logoPanel, BorderLayout.CENTER);
 		
-		JLabel authorLabel = new JLabel("作者：Dragon Wen");
+		JLabel authorLabel = new JLabel("作者：软件工程实践小组");
 		authorLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
 		
-		JLabel emailLabel = new JLabel("邮箱：18475536452@163.com");
+		JLabel emailLabel = new JLabel("邮箱：mhuanyu＠foxmail.com");
 		emailLabel.setFont(new Font("微软雅黑", Font.PLAIN, 13));
 		
 		JLabel logoLabel = new JLabel("");

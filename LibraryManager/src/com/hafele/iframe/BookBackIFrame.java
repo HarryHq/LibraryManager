@@ -10,6 +10,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -37,8 +39,6 @@ import com.hafele.util.MapUtil;
 import com.hafele.util.MyDocument;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年10月10日 上午9:30:52
 * 图书归还窗体实现类
 */
 @SuppressWarnings("serial")
@@ -268,7 +268,14 @@ public class BookBackIFrame extends JInternalFrame {
 			}
 			borrowDateTxt.setText(table.getValueAt(selRow, 5).toString().trim());
 			allotedDaysTxt.setText(allotedDays + "");
-			totalDays = differentDaysByMillisecond(currentDate,java.sql.Date.valueOf(table.getValueAt(selRow, 5).toString().trim()));
+			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			Date date=null;
+			try {
+				date = df.parse(table.getValueAt(selRow, 5).toString());
+			} catch (ParseException e1) {
+				e1.printStackTrace();
+			}
+			totalDays = differentDaysByMillisecond(currentDate,date);
 			overdueDays = totalDays - Integer.parseInt(allotedDays);
 			realDaysTxt.setText(totalDays + "");
 			if(overdueDays > 0) {

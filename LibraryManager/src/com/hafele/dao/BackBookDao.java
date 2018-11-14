@@ -61,11 +61,11 @@ public class BackBookDao {
 				i = 1;
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
-			DbHelper.close(conn);
+			e.printStackTrace();			
 			JOptionPane.showMessageDialog(null, "异常：请检查数据是否有误！");
+		}finally {			
+			DbHelper.close(conn);
 		}
-		DbHelper.close(conn);
 		return i;
 	}
 

@@ -3,8 +3,7 @@ package com.hafele.model;
 import java.sql.Date;
 
 /**
-* @author Dragon Wen E-mail:18475536452@163.com
-* @version 创建时间：2017年9月30日 上午12:35:07
+*
 * 书本封装类
 */
 public class BookInfo {

@@ -72,7 +72,8 @@ public class BookInfoAddIFrame extends JInternalFrame {
 		setFrameIcon(new ImageIcon(BookInfoAddIFrame.class.getResource("/icon/book_add_16px.png")));
 		setTitle("图书信息添加");
 		setIconifiable(true);
-		setClosable(true);
+		setMaximizable(true);
+		
 		setClosable(true);								// 设置窗体可关闭－－－必须
 		setBounds(100, 100, 450, 341);					// 设置窗体位置和大小－－－必须
 		
