@@ -49,15 +49,15 @@ create table borrow_record(
 );
 
 create table return_record(
-	bookid varchar(10),
+	bookid varchar(20),
 	readerid varchar(10),
-	returndate varchar(20)
+	returndate varchar(30)
 );
 
 create table reader_fee(
 	readerid varchar(10),
 	readername varchar(20),
-	bookid varchar(10),
+	bookid varchar(20),
 	bookname varchar(20),
 	bookfee varchar(10),
 	borrowdate varchar(30)
